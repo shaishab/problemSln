@@ -7,19 +7,15 @@ angular.module('articles').config(['$stateProvider',
 		$stateProvider.
 		state('listSolutions', {
 			url: '/solutions',
-			templateUrl: 'modules/solutions/views/list-solutions.client.view.html'
+			templateUrl: 'modules/solutions/views/index-solutions.client.view.html'
 		}).
-		state('createSolutions', {
-			url: '/solutions/create',
-			templateUrl: 'modules/articles/views/create-solution.client.view.html'
+		state('showDropdownList', {
+			url: '/solutions/dropdownList',
+			templateUrl: 'modules/solutions/views/dropdown-list.html'
 		}).
 		state('viewSolutions', {
 			url: '/solutions/:articleId',
 			templateUrl: 'modules/solutions/views/view-solution.client.view.html'
-		}).
-		state('editSolutions', {
-			url: '/solutions/:articleId/edit',
-			templateUrl: 'modules/solutions/views/edit-solution.client.view.html'
 		});
 	}
 ]);

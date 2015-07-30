@@ -1,0 +1,20 @@
+<section data-ng-controller="SolutionsController" data-ng-init="dropdownList()">
+	<div class="page-header">
+		<h1>Create Dropdown list using ngOption</h1>
+	</div>
+	<div>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<div class="col-md-3"><label><i class="fa fa-question-circle fa-fw"></i> User List</label></div>
+				<div class="col-md-4">
+					<select class="form-control" ng-model="selectedUser" ng-options="user.name for user in users"></select>
+				</div>
+				<p>selected User Id: {{selectedUser.id}}</p>
+				<p>selected User name: {{selectedUser.name}}</p>
+				<p data-ng-show="users.length">selected User name: {{users.length}}</p>
+				<div ng-show="project && project.images && project.images.length">
+					<div data-ng-show="project && project.images && project.images.length">
+			</div>
+		</form>
+	</div>
+</section>
