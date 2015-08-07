@@ -13,7 +13,45 @@
 				<p>selected User name: {{selectedUser.name}}</p>
 				<p data-ng-show="users.length">selected User name: {{users.length}}</p>
 				<div ng-show="project && project.images && project.images.length">
-					<div data-ng-show="project && project.images && project.images.length">
+					<div data-ng-show="project && project.images && project.images.length"></div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="page-header">
+		<h1>Create Nativ select Dropdown list using ngOption</h1>
+	</div>
+	<div>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<div class="col-md-3"><label><i class="fa fa-question-circle fa-fw"></i> District List</label></div>
+				<div class="col-md-4">
+					<select class="form-control" ng-model="selectedDist" ng-options="district.name for district in districts">
+						<option value="">Select</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-3"><label><i class="fa fa-question-circle fa-fw"></i> Thana List</label></div>
+				<div class="col-md-4">
+					<select class="form-control" ng-model="selectedThana" ng-options="thana.name for thana in thanas | filter: filterExpression">
+						<option value="">Select</option>
+					</select>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="page-header">
+		<h1>Initialize with value Dropdown list using ngOption</h1>
+	</div>
+	<div>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<div class="col-md-3"><label><i class="fa fa-question-circle fa-fw"></i> Select List</label></div>
+				<div class="col-md-4">
+					<select class="form-control" ng-model="newQuestion.positionOnSurvey" ng-options="position for position in vm.questionsPositions"></select>
+				</div>
 			</div>
 		</form>
 	</div>
