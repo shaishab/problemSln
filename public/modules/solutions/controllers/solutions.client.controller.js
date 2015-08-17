@@ -4,6 +4,7 @@
 angular.module('solutions').controller('SolutionsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Solutions',
 	function($scope, $stateParams, $location, Authentication, Solutions) {
 		$scope.authentication = Authentication;
+		console.log($location.search());
 
 		$scope.dropdownList = function() {
 			$scope.selectedDist={};

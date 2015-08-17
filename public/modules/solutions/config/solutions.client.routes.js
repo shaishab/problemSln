@@ -13,9 +13,9 @@ angular.module('articles').config(['$stateProvider',
 			url: '/solutions/dropdownList',
 			templateUrl: 'modules/solutions/views/dropdown-list.html'
 		}).
-		state('viewSolutions', {
-			url: '/solutions/:articleId',
-			templateUrl: 'modules/solutions/views/view-solution.client.view.html'
+		state('showMenuPage', {
+			url: '/solutions/menu',
+			templateUrl: 'modules/solutions/views/menu-page.html'
 		});
 	}
 ]);
